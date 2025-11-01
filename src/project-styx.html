@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STYX - Mohamad Meri</title>
+    <meta name="description" content="Full-Stack Workout Tracking Application" />
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/project-detail.css" />
+  </head>
+  <body>
+    <header id="hero">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="container">
+          <h1 id="logo">
+            <a href="index.html">
+              <video class="logo-video" autoplay loop muted playsinline>
+                <source src="./assets/logo.mp4" type="video/mp4">
+              </video>
+            </a>
+          </h1>
+          <ul class="nav-menu">
+            <li><a class="nav-link" href="index.html#about">ABOUT</a></li>
+            <li><a class="nav-link" href="index.html#skills">SKILLS</a></li>
+            <li><a class="nav-link" href="index.html#experience">EXPERIENCE</a></li>
+            <li><a class="nav-link" href="index.html#projects">PROJECTS</a></li>
+            <li><a class="nav-link" href="index.html#contact">CONTACT</a></li>
+            <li>
+              <a class="nav-link btn btn-primary" href="#" id="resumeBtn">
+                RESUME <i class="fas fa-arrow-right"></i>
+              </a>
+            </li>
+            <div class="theme-switch">
+              <input type="checkbox" id="switch" />
+              <label class="toggle-icons" for="switch">
+                <img class="moon" src="assets/moon.svg" alt="Dark mode" />
+                <img class="sun" src="assets/sun.svg" alt="Light mode" />
+              </label>
+            </div>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Animated Gradient Background -->
+      <div class="gradient-bg">
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+        <div class="gradient-blob blob-3"></div>
+      </div>
+
+      <!-- Project Hero -->
+      <div class="project-hero-content">
+        <a href="index.html#projects" class="back-link">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <h1>STYX</h1>
+        <p class="project-subtitle">Full-Stack Workout Tracking Application</p>
+        <div class="project-tags">
+          <span class="tag">Flask</span>
+          <span class="tag">Python</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">pytest</span>
+          <span class="tag">Hypothesis</span>
+          <span class="tag">CI/CD</span>
+        </div>
+        <div class="project-links-hero">
+          <a href="https://github.com/mohamadmeri" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Project Overview -->
+      <section class="project-section">
+        <div class="container-small">
+          <h2>Project Overview</h2>
+          <p class="lead">
+            STYX is a comprehensive full-stack workout tracking application currently in development. 
+            The project demonstrates advanced software engineering practices including modular architecture, 
+            extensive testing, and automated deployment pipelines.
+          </p>
+          <div class="status-badge">
+            <i class="fas fa-code"></i> In Active Development
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Features -->
+      <section class="project-section bg-alt">
+        <div class="container-small">
+          <h2>Key Features & Architecture</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <h3>Full-Stack Architecture</h3>
+              <p>
+                Architected and developed using Python and Flask, engineering both backend logic 
+                and front-end structure with a focus on scalability and maintainability.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-puzzle-piece"></i>
+              </div>
+              <h3>Custom Configuration System</h3>
+              <p>
+                Designed and implemented a standalone configuration package that dynamically parses 
+                TOML files, enhancing modularity and simplifying environment-specific setups.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3>Robust Database Layer</h3>
+              <p>
+                Built a robust backend supported by a relational database, with custom CLI commands 
+                to streamline database initialization, resets, and management tasks.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-vial"></i>
+              </div>
+              <h3>Comprehensive Testing Suite</h3>
+              <p>
+                Implemented property-based testing with pytest and Hypothesis, automatically generating 
+                diverse test cases to uncover edge cases and ensure code reliability.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-infinity"></i>
+              </div>
+              <h3>CI/CD Pipeline</h3>
+              <p>
+                Automated the build and testing lifecycle with GitHub Actions, ensuring immediate 
+                code validation upon every commit for continuous quality assurance.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3>Code Quality Standards</h3>
+              <p>
+                Enforced modern development standards using Ruff for high-performance linting and 
+                formatting, with Coveralls integration to monitor and maintain high test coverage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Stack -->
+      <section class="project-section">
+        <div class="container-small">
+          <h2>Technical Implementation</h2>
+          
+          <div class="tech-detail">
+            <h3><i class="fas fa-server"></i> Backend Development</h3>
+            <p>
+              The backend is built with Flask, providing a clean RESTful API structure. The application 
+              follows modern architectural patterns with separation of concerns, making it easy to maintain 
+              and extend. Database operations are handled through SQLAlchemy ORM, providing type-safe 
+              database interactions.
+            </p>
+          </div>
+
+          <div class="tech-detail">
+            <h3><i class="fas fa-cog"></i> Configuration Management</h3>
+            <p>
+              Developed a custom configuration package that reads TOML files and provides type-safe 
+              configuration access throughout the application. This approach allows for easy environment 
+              switching (development, testing, production) without code changes.
+            </p>
+          </div>
+
+          <div class="tech-detail">
+            <h3><i class="fas fa-terminal"></i> CLI Tools</h3>
+            <p>
+              Created custom Flask CLI commands for common database operations like initialization, 
+              migrations, and seeding test data. These tools streamline development workflows and 
+              reduce the chance of human error in database management.
+            </p>
+          </div>
+
+          <div class="tech-detail">
+            <h3><i class="fas fa-flask"></i> Testing Strategy</h3>
+            <p>
+              Implemented a multi-layered testing approach combining unit tests with pytest and 
+              property-based tests using Hypothesis. This strategy automatically generates hundreds 
+              of test cases, finding edge cases that manual testing might miss. Coveralls tracks 
+              test coverage to ensure all critical paths are tested.
+            </p>
+          </div>
+
+          <div class="tech-detail">
+            <h3><i class="fas fa-rocket"></i> Automation & CI/CD</h3>
+            <p>
+              GitHub Actions automates the entire testing pipeline, running tests on every push and 
+              pull request. Ruff performs fast linting and code formatting checks, ensuring consistent 
+              code style across the project. Failed builds are immediately reported, maintaining code quality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technologies Used -->
+      <section class="project-section bg-alt">
+        <div class="container-small">
+          <h2>Technologies & Tools</h2>
+          <div class="tech-stack">
+            <div class="tech-category">
+              <h4>Backend</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">SQLAlchemy</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+            </div>
+
+            <div class="tech-category">
+              <h4>Testing</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">pytest</span>
+                <span class="tech-tag">Hypothesis</span>
+                <span class="tech-tag">Coveralls</span>
+              </div>
+            </div>
+
+            <div class="tech-category">
+              <h4>DevOps & Tools</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">GitHub Actions</span>
+                <span class="tech-tag">Ruff</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">TOML</span>
+              </div>
+            </div>
+
+            <div class="tech-category">
+              <h4>Architecture</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">MVC Pattern</span>
+                <span class="tech-tag">CLI Tools</span>
+                <span class="tech-tag">Modular Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Development Highlights -->
+      <section class="project-section">
+        <div class="container-small">
+          <h2>Development Highlights</h2>
+          <div class="highlights-list">
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h4>Modular Architecture</h4>
+                <p>Designed with separation of concerns, making the codebase maintainable and testable</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h4>Test-Driven Development</h4>
+                <p>Property-based testing catches edge cases that traditional testing might miss</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h4>Automated Quality Checks</h4>
+                <p>CI/CD pipeline ensures code quality and prevents regressions automatically</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h4>Developer Experience</h4>
+                <p>Custom CLI tools and configuration system streamline development workflows</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h4>Modern Best Practices</h4>
+                <p>Follows industry standards for Python development with type hints and documentation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="project-section cta-section">
+        <div class="container-small">
+          <h2>Interested in the Code?</h2>
+          <p class="lead">
+            Check out the repository on GitHub to see the implementation details and architecture.
+          </p>
+          <div class="cta-buttons">
+            <a href="https://github.com/mohamadmeri" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            <a href="index.html#contact" class="btn btn-secondary">
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="social-links">
+            <a href="https://github.com/mohamadmeri" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mohamadmeri/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:mohamad-meri@outlook.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+          <p>&copy; <span id="datee"></span> Mohamad Meri. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>My Resume</h3>
+          <span class="modal-close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <iframe 
+            src="assets/Mohamad_Meri_CV.pdf" 
+            class="pdf-viewer"
+            title="Mohamad Meri Resume">
+          </iframe>
+        </div>
+        <div class="modal-footer">
+          <a href="assets/Mohamad_Meri_CV.pdf" download="Mohamad_Meri_Resume.pdf" class="btn btn-primary">
+            <i class="fas fa-download"></i> Download PDF
+          </a>
+          <a href="assets/Mohamad_Meri_CV.pdf" target="_blank" class="btn btn-secondary">
+            <i class="fas fa-external-link-alt"></i> Open in New Tab
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
