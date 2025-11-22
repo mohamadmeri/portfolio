@@ -2,312 +2,201 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ResinFlow Analytics - Mohamad Meri</title>
-    <meta name="description" content="ETL Pipeline and Analytics Platform for Manufacturing Cost Optimization" />
+    <title>Manufacturing Analytics Platform | Mohamad Meri</title>
+    <meta name="description" content="End-to-end data pipeline transforming disparate Excel sources into actionable business intelligence for manufacturing operations." />
     
-    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/project-detail.css" />
   </head>
   <body>
-    <header id="hero">
-      <!-- Navbar -->
-      <nav class="navbar">
-        <div class="container">
-          <h1 id="logo">
-            <a href="index.html">
-              <video class="logo-video" autoplay loop muted playsinline>
-                <source src="./assets/logo.mp4" type="video/mp4">
-              </video>
-            </a>
-          </h1>
-          <ul class="nav-menu">
-            <li><a class="nav-link" href="index.html#about">ABOUT</a></li>
-            <li><a class="nav-link" href="index.html#skills">SKILLS</a></li>
-            <li><a class="nav-link" href="index.html#experience">EXPERIENCE</a></li>
-            <li><a class="nav-link" href="index.html#projects">PROJECTS</a></li>
-            <li><a class="nav-link" href="index.html#contact">CONTACT</a></li>
-            <li>
-              <a class="nav-link btn btn-primary" href="#" id="resumeBtn">
-                RESUME <i class="fas fa-arrow-right"></i>
-              </a>
-            </li>
-            <div class="theme-switch">
-              <input type="checkbox" id="switch" />
-              <label class="toggle-icons" for="switch">
-                <img class="moon" src="assets/moon.svg" alt="Dark mode" />
-                <img class="sun" src="assets/sun.svg" alt="Light mode" />
-              </label>
-            </div>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Animated Gradient Background -->
-      <div class="gradient-bg">
-        <div class="gradient-blob blob-1"></div>
-        <div class="gradient-blob blob-2"></div>
-        <div class="gradient-blob blob-3"></div>
+    
+    <div class="scroll-progress-track"><div class="scroll-progress-bar" id="progressBar"></div></div>
+    
+    <nav class="navbar visible project-nav" id="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">MM.</a>
+        <a href="index.html#work" class="nav-back"><i class="fas fa-arrow-left"></i> Back to Projects</a>
       </div>
+    </nav>
 
-      <!-- Project Hero -->
-      <div class="project-hero-content">
-        <a href="index.html#projects" class="back-link">
-          <i class="fas fa-arrow-left"></i> Back to Portfolio
-        </a>
-        <h1>ResinFlow Analytics</h1>
-        <p class="project-subtitle">Manufacturing Cost Optimization Platform</p>
-        <div class="project-tags">
-          <span class="tag">Python</span>
-          <span class="tag">pandas</span>
-          <span class="tag">NumPy</span>
-          <span class="tag">Plotly</span>
-          <span class="tag">ETL Pipeline</span>
-          <span class="tag">Data Analytics</span>
+    <header class="project-header">
+      <div class="container">
+        <div class="project-hero-content">
+          <div class="project-hero-card">
+            <div class="project-icon-lg"><i class="fas fa-chart-line"></i></div>
+            <h1>Manufacturing Analytics Platform</h1>
+            <p class="lead-text">Engineered an end-to-end ETL pipeline and interactive BI suite that transformed disparate data sources into strategic insights for production optimization.</p>
+            
+            <div class="tech-badges">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Pandas & NumPy</span>
+              <span class="tech-badge">Plotly</span>
+              <span class="tech-badge">ETL Pipeline</span>
+              <span class="tech-badge">Data Engineering</span>
+              <span class="tech-badge">Business Intelligence</span>
+            </div>
+          </div>
         </div>
       </div>
     </header>
 
-    <main>
-      <!-- Project Overview -->
-      <section class="project-section">
-        <div class="container-small">
-          <h2>Project Overview</h2>
-          <p class="lead">
-            Led a consulting engagement for a plastics manufacturer, analyzing resin substitution events 
-            across multiple machines and production months to uncover cost and efficiency drivers.
-          </p>
-        </div>
-      </section>
-
-      <!-- Key Features -->
-      <section class="project-section bg-alt">
-        <div class="container-small">
-          <h2>Key Achievements</h2>
-          <div class="features-grid">
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-database"></i>
-              </div>
-              <h3>ETL Pipeline Development</h3>
-              <p>
-                Engineered a Python-based ETL pipeline using pandas, NumPy, and openpyxl that consolidated 
-                8 messy Excel workbooks with thousands of records into a single, validated dataset.
-              </p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <h3>Interactive Dashboards</h3>
-              <p>
-                Developed 7 interactive dashboards using Plotly with drill-down capabilities, deployed 
-                internally via Cloudflare Pages, providing leadership with real-time visibility into 
-                profitable vs. loss-making resin blends, machines, and parts.
-              </p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-robot"></i>
-              </div>
-              <h3>Automated KPI Reports</h3>
-              <p>
-                Built a canonical data model and automated KPI reporting system tracking cost variance, 
-                substitution rates, and part/machine/material performance metrics.
-              </p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-chart-pie"></i>
-              </div>
-              <h3>Statistical Analysis</h3>
-              <p>
-                Performed comprehensive statistical analysis identifying key cost drivers, revealing that 
-                92% of cost increases were concentrated in just 3 operational areas out of 50+.
-              </p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-file-alt"></i>
-              </div>
-              <h3>Actionable Insights</h3>
-              <p>
-                Delivered a comprehensive analysis report with actionable recommendations, enabling the 
-                client to confirm that 79% of substitutions were cost-neutral or saving and to target 
-                loss-driving material swaps for corrective action.
-              </p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <h3>Decision Support Tool</h3>
-              <p>
-                Empowered decision-makers with a secure internal decision-support tool, improving 
-                transparency, reducing waste, and enhancing profitability across production operations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Technical Details -->
-      <section class="project-section">
-        <div class="container-small">
-          <h2>Technical Implementation</h2>
-          
-          <div class="tech-detail">
-            <h3><i class="fas fa-cogs"></i> Data Engineering</h3>
-            <p>
-              Developed a robust ETL pipeline that automated the consolidation of disparate Excel workbooks. 
-              The pipeline included data validation, normalization, and quality checks to ensure data integrity. 
-              Used pandas for efficient data manipulation and openpyxl for Excel file handling.
-            </p>
-          </div>
-
-          <div class="tech-detail">
-            <h3><i class="fas fa-project-diagram"></i> Data Modeling</h3>
-            <p>
-              Created a canonical data model that standardized resin substitution events, machine operations, 
-              and material costs. This model served as the foundation for all downstream analytics and reporting.
-            </p>
-          </div>
-
-          <div class="tech-detail">
-            <h3><i class="fas fa-chart-bar"></i> Visualization & Analytics</h3>
-            <p>
-              Built interactive dashboards using Plotly that allowed stakeholders to drill down from 
-              high-level trends to specific machine-part-material combinations. Dashboards were deployed 
-              securely via Cloudflare Pages for internal access.
-            </p>
-          </div>
-
-          <div class="tech-detail">
-            <h3><i class="fas fa-tasks"></i> Automated Reporting</h3>
-            <p>
-              Implemented automated KPI calculation and report generation, eliminating manual processes 
-              and ensuring consistent, up-to-date insights for decision-makers.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Impact -->
-      <section class="project-section bg-alt">
-        <div class="container-small">
-          <h2>Business Impact</h2>
-          <div class="impact-grid">
-            <div class="impact-card">
-              <div class="impact-number">79%</div>
-              <p>Of substitutions confirmed as cost-neutral or cost-saving</p>
-            </div>
-            <div class="impact-card">
-              <div class="impact-number">92%</div>
-              <p>Of cost increases concentrated in 3 key operational areas</p>
-            </div>
-            <div class="impact-card">
-              <div class="impact-number">8</div>
-              <p>Excel workbooks consolidated into single validated dataset</p>
-            </div>
-            <div class="impact-card">
-              <div class="impact-number">7</div>
-              <p>Interactive dashboards with drill-down capabilities</p>
-            </div>
+    <main class="project-body">
+      <div class="container">
+        
+        <!-- Overview & Challenge Grid -->
+        <div class="content-grid-2">
+          <div class="content-card">
+            <h3><i class="fas fa-lightbulb"></i> Project Overview</h3>
+            <p>A plastics manufacturer was performing daily material substitutions to maintain production flow, but had no systematic way to measure financial impact or identify operational patterns. Leadership needed to move from assumptions to data-driven decision-making.</p>
+            <p style="margin-top: 1rem;">I built a complete analytics solution from raw Excel files to interactive dashboards, revealing critical cost drivers and enabling strategic optimization.</p>
           </div>
           
-          <div class="impact-summary">
-            <p class="lead">
-              The ResinFlow Analytics platform transformed raw production data into actionable intelligence, 
-              enabling data-driven decision-making and identifying specific areas for cost optimization. 
-              The client gained unprecedented visibility into their operations and could confidently make 
-              strategic decisions about material substitutions and production planning.
-            </p>
+          <div class="content-card">
+            <h3><i class="fas fa-exclamation-triangle"></i> The Challenge</h3>
+            <ul>
+              <li>Multiple disparate Excel files with complex, inconsistent formatting</li>
+              <li>Merged-cell headers breaking standard parsers</li>
+              <li>Thousands of non-standardized text entries</li>
+              <li>No system to track financial impact of substitutions</li>
+              <li>Critical business questions unanswered</li>
+            </ul>
           </div>
         </div>
-      </section>
 
-      <!-- CTA Section -->
-      <section class="project-section cta-section">
-        <div class="container-small">
-          <h2>Interested in Similar Solutions?</h2>
-          <p class="lead">
-            I specialize in building data-driven solutions that transform complex datasets into 
-            actionable business insights.
-          </p>
-          <div class="cta-buttons">
-            <a href="index.html#contact" class="btn btn-primary">
-              Get In Touch
-            </a>
-            <a href="index.html#projects" class="btn btn-secondary">
-              View More Projects
-            </a>
+        <!-- The Solution: Process Timeline -->
+        <div class="content-full">
+          <h2 class="section-title">The Solution: Four-Phase Engineering Approach</h2>
+          
+          <div class="process-timeline">
+            <div class="process-card">
+              <div class="process-number">1</div>
+              <h4>Data Engineering</h4>
+              <p>Built custom header parser and alignment engine to solve critical extraction bugs</p>
+            </div>
+            
+            <div class="process-card">
+              <div class="process-number">2</div>
+              <h4>Normalization</h4>
+              <p>Developed regex-based cleaning system with validation checkpoints</p>
+            </div>
+            
+            <div class="process-card">
+              <div class="process-number">3</div>
+              <h4>Analysis & Strategy</h4>
+              <p>Created categorization logic and aggregated insights across dimensions</p>
+            </div>
+            
+            <div class="process-card">
+              <div class="process-number">4</div>
+              <h4>BI & Deployment</h4>
+              <p>Built interactive dashboards with drill-down capabilities</p>
+            </div>
           </div>
         </div>
-      </section>
+
+        <!-- Technical Deep Dive: 3-Column Grid -->
+        <h2 class="section-title">Technical Deep Dive</h2>
+        <p class="section-subtitle">Key engineering challenges and solutions</p>
+        
+        <div class="content-grid-3">
+          <div class="content-card">
+            <h3><i class="fas fa-wrench"></i> Header Parsing</h3>
+            <p><strong>Problem:</strong> Multi-level merged-cell headers caused standard parsers to misalign data, creating silent corruption.</p>
+            <p style="margin-top: 1rem;"><strong>Solution:</strong> Engineered a custom parser that dynamically detects header rows, reads three independent tables, and programmatically enforces perfect alignment. This single innovation ensured data integrity across the entire pipeline.</p>
+          </div>
+          
+          <div class="content-card">
+            <h3><i class="fas fa-broom"></i> Surgical Normalization</h3>
+            <p><strong>Challenge:</strong> Thousands of text entries with inconsistent whitespace, casing, and punctuation.</p>
+            <p style="margin-top: 1rem;"><strong>Solution:</strong> Built a regex-based cleaning engine that standardizes entries without altering business terminology. Included mid-pipeline validation checkpoints exporting cleaned values to .txt files for manual verification before proceeding.</p>
+          </div>
+          
+          <div class="content-card">
+            <h3><i class="fas fa-sitemap"></i> Strategic Categorization</h3>
+            <p><strong>Innovation:</strong> Transformed raw blend changes into meaningful business strategies using logical hierarchies.</p>
+            <p style="margin-top: 1rem;">Examples: "Removed All Virgin," "Recycled to Virgin Dominant," "Pure Virgin Swap." This enabled leadership to analyze profitability by strategy type, not just by material codes.</p>
+          </div>
+        </div>
+
+        <!-- BI & Dashboards -->
+        <div class="content-full">
+          <div class="content-card">
+            <h3><i class="fas fa-chart-bar"></i> Interactive Business Intelligence Suite</h3>
+            <p>Developed seven specialized dashboards using Plotly with multi-level drill-down capabilities:</p>
+            <ul style="margin-top: 1rem;">
+              <li><strong>Executive Summary:</strong> High-level financial overview and KPIs</li>
+              <li><strong>Machine 360°:</strong> Complete performance profile by machine with month-over-month analysis</li>
+              <li><strong>Part Number Profitability Analyzer:</strong> Identify which parts drive costs vs. savings</li>
+              <li><strong>Strategy Performance:</strong> Compare financial outcomes across substitution strategies</li>
+              <li><strong>Blend Analysis:</strong> Material composition impact on costs</li>
+            </ul>
+            <p style="margin-top: 1.5rem;">Deployed as a static website to GitHub Pages, providing stakeholders with a single, professional URL for all analytical tools.</p>
+          </div>
+        </div>
+
+        <!-- Business Impact: 2-Column Grid -->
+        <h2 class="section-title">Business Impact</h2>
+        
+        <div class="content-grid-2">
+          <div class="content-card">
+            <h3><i class="fas fa-trophy"></i> Key Findings</h3>
+            <ul>
+              <li>Quantified financial impact, proving substitution process was a net positive</li>
+              <li>Achieved 80% "good" substitution rate across operations</li>
+              <li>Identified optimal strategy: "Remove All Virgin" material for maximum savings</li>
+              <li>Revealed 22.5% visibility gap due to missing cost data</li>
+            </ul>
+          </div>
+          
+          <div class="content-card">
+            <h3><i class="fas fa-bullseye"></i> Surgical Optimization</h3>
+            <p><strong>80/20 Analysis Revealed:</strong> Over 92% of machine-related cost increases came from just 3 machines.</p>
+            <p style="margin-top: 1rem;">This finding enabled the client to focus engineering resources on specific high-impact areas rather than broad, unfocused process improvements.</p>
+            <div class="stat-highlight">
+              <strong>Result:</strong> Transformed reactive operations into strategic, data-driven optimization with clear ROI priorities.
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Technologies -->
+        <div class="content-full">
+          <div class="content-card">
+            <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+              <div>
+                <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 0.5rem;">Core Technologies</p>
+                <p style="font-size: 0.9rem;">Python, Pandas, NumPy, Plotly</p>
+              </div>
+              <div>
+                <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 0.5rem;">Data Engineering</p>
+                <p style="font-size: 0.9rem;">ETL Pipelines, Regex, Openpyxl</p>
+              </div>
+              <div>
+                <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 0.5rem;">Deployment</p>
+                <p style="font-size: 0.9rem;">GitHub Pages, Git, LaTeX</p>
+              </div>
+              <div>
+                <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 0.5rem;">Development</p>
+                <p style="font-size: 0.9rem;">Jupyter Notebooks, VS Code</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </main>
 
-    <footer id="footer">
+    <footer>
       <div class="container">
-        <div class="footer-content">
-          <div class="social-links">
-            <a href="https://github.com/mohamadmeri" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/mohamadmeri/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:mohamad-meri@outlook.com" aria-label="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
-          <p>&copy; <span id="datee"></span> Mohamad Meri. All rights reserved.</p>
-        </div>
+        <p class="footer-text">&copy; <span id="year"></span> Mohamad Meri.</p>
       </div>
     </footer>
-
-    <!-- Resume Modal -->
-    <div id="resumeModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>My Resume</h3>
-          <span class="modal-close">&times;</span>
-        </div>
-        <div class="modal-body">
-          <iframe 
-            src="assets/Mohamad_Meri_CV.pdf" 
-            class="pdf-viewer"
-            title="Mohamad Meri Resume">
-          </iframe>
-        </div>
-        <div class="modal-footer">
-          <a href="assets/Mohamad_Meri_CV.pdf" download="Mohamad_Meri_Resume.pdf" class="btn btn-primary">
-            <i class="fas fa-download"></i> Download PDF
-          </a>
-          <a href="assets/Mohamad_Meri_CV.pdf" target="_blank" class="btn btn-secondary">
-            <i class="fas fa-external-link-alt"></i> Open in New Tab
-          </a>
-        </div>
-      </div>
-    </div>
-
     <script src="js/script.js"></script>
   </body>
 </html>

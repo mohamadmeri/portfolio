@@ -2,501 +2,304 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Primary Meta Tags -->
-    <title>Portfolio - Mohamad Meri</title>
-    <meta name="title" content="Portfolio - Mohamad Meri" />
-    <meta
-      name="description"
-      content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project"
-    />
-
-    <!-- Open Graph / Facebook -->
+    <title>Mohamad Meri - Data & Software Engineer</title>
+    <meta name="description" content="Software Engineer specializing in Backend Systems, ETL Pipelines, and Data Engineering. Building scalable solutions with Python and SQL." />
+    
+    <!-- SEO & Social Sharing -->
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://github.com/CommunityPro/portfolio-html"
-    />
-    <meta property="og:title" content="Portfolio Template - Open source" />
-    <meta
-      property="og:description"
-      content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project"
-    />
-    <meta
-      property="og:image"
-      content="https://user-images.githubusercontent.com/62628408/150613011-b78a7f5a-0af1-4312-aab0-0022e7258693.png"
-    />
-
-    <!-- Twitter -->
+    <meta property="og:url" content="https://mohamadmeri.com/" />
+    <meta property="og:title" content="Mohamad Meri - Portfolio" />
+    <meta property="og:description" content="Software Engineer specializing in Backend Systems and Data Pipelines." />
+    <meta property="og:image" content="assets/og-image.png" /> 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:url"
-      content="https://github.com/CommunityPro/portfolio-html"
-    />
-    <meta property="twitter:title" content="Portfolio Template - Open source" />
-    <meta
-      property="twitter:description"
-      content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project"
-    />
-    <meta
-      property="twitter:image"
-      content="https://user-images.githubusercontent.com/62628408/150613011-b78a7f5a-0af1-4312-aab0-0022e7258693.png"
-    />
-
-    <!-- Link -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/favicon/favicon-16x16.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="assets/favicon/android-chrome-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="512x512"
-      href="assets/favicon/android-chrome-512x512.png"
-    />
-    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utilities.css" />
   </head>
   <body>
-    <header id="hero">
-      <!-- Navbar -->
-      <nav class="navbar">
-        <div class="container">
-          <!-- Logo -->
-          <h1 id="logo">
-            <a href="#hero">
-              <video class="logo-video" autoplay loop muted playsinline>
-                <source src="./assets/logo.mp4" type="video/mp4">
-              </video>
-            </a>
-          </h1>
-          <!-- Navbar links -->
-          <ul class="nav-menu">
-            <li><a class="nav-link" href="#about">ABOUT</a></li>
-            <li><a class="nav-link" href="#skills">SKILLS</a></li>
-            <li><a class="nav-link" href="#experience">EXPERIENCE</a></li>
-            <li><a class="nav-link" href="#projects">PROJECTS</a></li>
-            <li><a class="nav-link" href="#contact">CONTACT</a></li>
-            <li>
-              <a class="nav-link btn btn-primary" href="#" id="resumeBtn">
-                RESUME <i class="fas fa-arrow-right"></i>
-              </a>
-            </li>
-
-            <!-- Toggle switch -->
-            <div class="theme-switch">
-              <input type="checkbox" id="switch" />
-              <label class="toggle-icons" for="switch">
-                <img class="moon" src="assets/moon.svg" alt="Dark mode" />
-                <img class="sun" src="assets/sun.svg" alt="Light mode" />
-              </label>
-            </div>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Animated Gradient Background -->
-      <div class="gradient-bg">
-        <div class="gradient-blob blob-1"></div>
-        <div class="gradient-blob blob-2"></div>
-        <div class="gradient-blob blob-3"></div>
+    <div class="scroll-progress-track"><div class="scroll-progress-bar" id="progressBar"></div></div>
+    
+    <div class="floating-logo" id="floatingLogo">MM.</div>
+    <button class="floating-resume" id="floatingResumeBtn">Resume</button>
+    
+    <!-- Vertical Socials -->
+    <div class="vertical-socials">
+      <a href="https://github.com/mohamadmeri" target="_blank" class="social-icon" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/mohamad-meri/" target="_blank" class="social-icon" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:mohamad-meri@outlook.com" class="social-icon" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#" class="logo">MM.</a>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#work" class="nav-link">Case Studies</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#" id="resumeBtn" class="nav-btn">Resume</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
       </div>
+    </nav>
 
-      <!-- Hero Content -->
-      <div class="hero-content">
-        <img class="profile-image" src="assets/profile-image.png" alt="Mohamad Meri Profile Picture" />
-        <h1>Hi, I'm Mohamad Meri</h1>
-        <h2>Software Engineer</h2>
-        <p class="hero-description">
-          <!-- Text will be typed by JavaScript -->
-        </p>
-
-        <div class="social-links">
-          <a href="https://github.com/mohamadmeri" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/mohamadmeri/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="mailto:mohamad-meri@outlook.com" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
-
-        <a href="#about" class="scroll-down" aria-label="Scroll to About section">
-          <i class="fas fa-chevron-down"></i>
-        </a>
+    <div class="mobile-menu-overlay" id="mobileMenu">
+      <div class="mobile-menu-content">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+          <i class="fas fa-times"></i>
+        </button>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#work" class="mobile-link">Case Studies</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="#" class="mobile-resume-btn" id="mobileResumeBtn">View Resume</a>
       </div>
-    </header>
+    </div>
 
     <main>
-      <!-- About Section -->
-      <section id="about">
-        <div class="container">
-          <div class="section-header">
-            <h2>About Me</h2>
-            <p class="section-subtitle">Who I am and what I love to do</p>
+      <section id="hero" class="hero-section">
+        <div class="hero-spotlight" id="heroSpotlight"></div>
+        <div class="container hero-split">
+          <div class="hero-text fade-in-up">
+            <span class="hero-role">Software & Data Engineer</span>
+            <h1><span class="gradient-text">Mohamad Meri</span></h1>
+            <h2 style="font-size: 3rem; font-weight: 600; color: white; margin-bottom: 1.5rem; line-height: 1.2;">
+            Turning Complex Data into <span class="accent-text">Actionable Intelligence</span>.
+            </h2>
+            <p class="hero-sub" id="typedText"></p>
+            
+            <div class="hero-cta">
+              <a href="#work" class="btn btn-primary btn-magnetic">View Case Studies</a>
+              <a href="#contact" class="btn btn-text btn-magnetic">Get in Touch</a>
+            </div>
           </div>
-
-          <div class="about-content">
-            <div class="about-text">
-              <p>
-                I'm a software engineer who enjoys turning complex problems into clean, scalable, and efficient solutions. 
-                My focus lies in backend systems, APIs, and data-driven development — combining solid engineering with thoughtful design.
-              </p>
-              <p>
-                I care deeply about writing maintainable, testable, and high-performance code. My experience spans Python, 
-                Java, Flask, SQL, and CI/CD automation, with growing expertise in cloud platforms like AWS and GCP.
-              </p>
+          
+          <div class="profile-container fade-in-up">
+            <div class="profile-card" id="profileCard">
+              <img src="assets/profile-image.png" alt="Mohamad Meri" class="profile-img" id="profileImg">
+              <div class="floating-badge badge-1"><i class="fab fa-python"></i> Python Expert</div>
+              <div class="floating-badge badge-2"><i class="fas fa-database"></i> Data Engineer</div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Skills Section -->
-      <section id="skills">
+      <section id="skills" class="section bg-dark">
         <div class="container">
-          <div class="section-header">
-            <h2>Skills & Technologies</h2>
-            <p class="section-subtitle">Tools and technologies I work with</p>
+          <div class="section-header fade-in-up">
+            <h2>Technical Arsenal</h2>
+            <p>Core competencies in modern software engineering</p>
           </div>
-
-          <div class="skills-category">
-            <h3>Languages</h3>
-            <div class="skills-grid">
-              <div class="skill-card">
-                <i class="fab fa-python skill-icon"></i>
-                <span>Python</span>
-              </div>
-              <div class="skill-card">
-                <i class="fab fa-java skill-icon"></i>
-                <span>Java</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-database skill-icon"></i>
-                <span>SQL</span>
-              </div>
-              <div class="skill-card">
-                <i class="fab fa-html5 skill-icon"></i>
-                <span>HTML/CSS</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-code skill-icon"></i>
-                <span>C++</span>
-              </div>
+          <div class="skills-grid stagger-container">
+            <div class="skill-card stagger-item">
+              <div class="skill-icon"><i class="fas fa-code"></i></div>
+              <h3>Languages</h3>
+              <ul class="skill-list">
+                <li>Python</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>HTML/CSS</li>
+                <li>C++</li>
+              </ul>
             </div>
-          </div>
-
-          <div class="skills-category">
-            <h3>Data & Machine Learning</h3>
-            <div class="skills-grid">
-              <div class="skill-card">
-                <i class="fas fa-table skill-icon"></i>
-                <span>pandas</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-square-root-alt skill-icon"></i>
-                <span>NumPy</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-stream skill-icon"></i>
-                <span>ETL Pipelines</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-fire skill-icon"></i>
-                <span>PyTorch</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-brain skill-icon"></i>
-                <span>scikit-learn</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-chart-line skill-icon"></i>
-                <span>Plotly</span>
-              </div>
+            <div class="skill-card stagger-item">
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
+              <h3>Data & ML</h3>
+              <ul class="skill-list">
+                <li>pandas & NumPy</li>
+                <li>ETL Pipelines</li>
+                <li>PyTorch</li>
+                <li>scikit-learn</li>
+                <li>Plotly</li>
+              </ul>
             </div>
-          </div>
-
-          <div class="skills-category">
-            <h3>Development</h3>
-            <div class="skills-grid">
-              <div class="skill-card">
-                <i class="fas fa-flask skill-icon"></i>
-                <span>Flask</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-exchange-alt skill-icon"></i>
-                <span>REST APIs</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-server skill-icon"></i>
-                <span>Databases</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-vial skill-icon"></i>
-                <span>Pytest</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-check-double skill-icon"></i>
-                <span>Hypothesis</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-robot skill-icon"></i>
-                <span>Testing</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-infinity skill-icon"></i>
-                <span>CI/CD</span>
-              </div>
+            <div class="skill-card stagger-item">
+              <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+              <h3>Development</h3>
+              <ul class="skill-list">
+                <li>Flask</li>
+                <li>REST APIs</li>
+                <li>Relational DBs</li>
+                <li>Pytest & Hypothesis</li>
+                <li>CI/CD</li>
+              </ul>
             </div>
-          </div>
-
-          <div class="skills-category">
-            <h3>Tools & Platforms</h3>
-            <div class="skills-grid">
-              <div class="skill-card">
-                <i class="fab fa-git-alt skill-icon"></i>
-                <span>Git</span>
-              </div>
-              <div class="skill-card">
-                <i class="fab fa-github skill-icon"></i>
-                <span>GitHub</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-play-circle skill-icon"></i>
-                <span>GitHub Actions</span>
-              </div>
-              <div class="skill-card">
-                <i class="fab fa-aws skill-icon"></i>
-                <span>AWS</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-folder skill-icon"></i>
-                <span>S3</span>
-              </div>
-              <div class="skill-card">
-                <i class="fab fa-google skill-icon"></i>
-                <span>GCP</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-broom skill-icon"></i>
-                <span>Ruff</span>
-              </div>
-              <div class="skill-card">
-                <i class="fas fa-shield-alt skill-icon"></i>
-                <span>Coveralls</span>
-              </div>
+            <div class="skill-card stagger-item">
+              <div class="skill-icon"><i class="fas fa-toolbox"></i></div>
+              <h3>Tools</h3>
+              <ul class="skill-list">
+                <li>Git & GitHub</li>
+                <li>AWS (Lambda, S3)</li>
+                <li>GCP</li>
+                <li>Ruff & Coveralls</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Experience Section -->
-      <section id="experience">
+      <section id="experience" class="section bg-dark">
         <div class="container">
-          <div class="section-header">
+          <div class="section-header fade-in-up">
             <h2>Experience</h2>
-            <p class="section-subtitle">My professional journey</p>
           </div>
-
-          <div class="timeline">
-            <!-- Experience 1 -->
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-date">2025 - Present</div>
-                <h3>Data Engineer</h3>
-                <h4>Freelance/Independent Consultant</h4>
-                <p class="location">California, USA (Remote)</p>
-                <ul class="achievements">
-                  <li>Architected end-to-end ETL pipelines in Python (pandas, NumPy) to consolidate 8 Excel files with thousands of records into a single, analysis-ready dataset</li>
-                  <li>Engineered automated data cleaning solution using regular expressions and custom algorithms to standardize inconsistent text entries</li>
-                  <li>Developed and deployed 7 interactive dashboards using Plotly with drill-down capabilities</li>
-                  <li>Performed statistical analysis identifying key cost drivers, revealing 92% of cost increases concentrated in just 3 operational areas out of 50+</li>
-                </ul>
+          <div class="experience-timeline stagger-container">
+            <div class="exp-card stagger-item">
+              <div class="exp-header">
+                <div>
+                  <h3>Independent Consultant</h3>
+                  <div class="role-title">Data Engineer</div>
+                  <div class="exp-date">2025 - Present</div>
+                </div>
               </div>
+              <ul class="exp-bullets">
+                <li>Architected end-to-end ETL pipelines in Python (pandas, NumPy) to consolidate 8 Excel files with thousands of records</li>
+                <li>Engineered automated data cleaning using regular expressions to standardize inconsistent text entries</li>
+                <li>Developed 7 interactive dashboards using Plotly with drill-down capabilities</li>
+                <li>Performed statistical analysis identifying key cost drivers, revealing 92% of cost increases concentrated in 3 areas</li>
+              </ul>
             </div>
-
-            <!-- Experience 2 -->
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-date">2022 - 2024</div>
-                <h3>Software Engineer</h3>
-                <h4>Travelbook Holidays</h4>
-                <p class="location">Beirut, Lebanon</p>
-                <ul class="achievements">
-                  <li>Developed and maintained booking workflow modules and affiliate tracking features using Flask (Python), HTML/CSS, and SQL databases</li>
-                  <li>Implemented automated testing and code optimization to improve system reliability for daily operations</li>
-                  <li>Collaborated with stakeholders to troubleshoot technical issues and deliver feature enhancements</li>
-                </ul>
+            
+            <div class="exp-card stagger-item">
+              <div class="exp-header">
+                <div>
+                  <h3>Travelbook Holidays</h3>
+                  <div class="role-title">Software Engineer</div>
+                  <div class="exp-date">2022 - 2024</div>
+                </div>
               </div>
+              <ul class="exp-bullets">
+                <li>Developed and maintained booking workflow modules using Flask (Python), HTML/CSS, and SQL databases</li>
+                <li>Implemented automated testing and code optimization to improve system reliability</li>
+                <li>Collaborated with stakeholders to troubleshoot technical issues and deliver feature enhancements</li>
+              </ul>
             </div>
-
-            <!-- Experience 3 -->
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-date">2021 - 2022</div>
-                <h3>IT Support Technician</h3>
-                <h4>Travelbook Holidays</h4>
-                <p class="location">Beirut, Lebanon</p>
-                <ul class="achievements">
-                  <li>Provided technical support, system administration, and automation scripting for recurring operational tasks</li>
-                </ul>
+            
+            <div class="exp-card stagger-item">
+              <div class="exp-header">
+                <div>
+                  <h3>Travelbook Holidays</h3>
+                  <div class="role-title">IT Support Technician</div>
+                  <div class="exp-date">2021 - 2022</div>
+                </div>
               </div>
+              <ul class="exp-bullets">
+                <li>Provided technical support, system administration, and automation scripting</li>
+                <li>Managed infrastructure and recurring operational tasks</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Projects Section -->
-      <section id="projects">
+      <section id="work" class="section bg-white">
         <div class="container">
-          <div class="section-header">
-            <h2>Projects</h2>
-            <p class="section-subtitle">Some of my recent work</p>
+          <div class="section-header fade-in-up">
+            <h2>Case Studies</h2>
           </div>
-
           <div class="projects-grid">
-          <!-- Project 1 - ETL -->
-          <div class="project-card">
-            <div class="project-image">
-              <img src="assets/project/project-one.png" alt="ResinFlow Analytics Screenshot" />
-            </div>
-            <div class="project-info">
-              <h3>ResinFlow Analytics</h3>
-              <p>Python • pandas • NumPy • Plotly • ETL Pipeline</p>
-              <p class="project-description">
-                End-to-end ETL pipeline and analytics platform for manufacturing cost optimization, 
-                consolidating complex Excel data into actionable insights.
-              </p>
-              <div class="project-links">
-                <a href="project-resinflow.html" class="project-details-btn" aria-label="View project details">
-                  View Details <i class="fas fa-arrow-right"></i>
-                </a>
+            <div class="project-row fade-in-up">
+              <div class="project-visual"><i class="fas fa-dumbbell"></i></div>
+              <div class="project-content">
+                <h3>STYX Workout Tracker</h3>
+                <p>A full-stack application solving data persistence in fitness tracking with modular architecture and rigorous testing standards.</p>
+                <div class="project-tags">
+                  <span>Flask</span>
+                  <span>PostgreSQL</span>
+                  <span>CI/CD</span>
+                  <span>Pytest</span>
+                </div>
+                <a href="project-styx.html" class="project-link">View Case Study <i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
-          </div>
-
-          <!-- Project 2 - STYX -->
-          <div class="project-card">
-            <div class="project-image">
-              <img src="assets/project/project-two.png" alt="STYX Workout Tracker Screenshot" />
+            
+            <div class="project-row fade-in-up">
+              <div class="project-content">
+                <h3>Manufacturing Analytics Platform</h3>
+                <p>End-to-end ETL pipeline transforming disparate data sources into strategic insights, revealing critical cost drivers and enabling surgical optimization.</p>
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>Pandas & NumPy</span>
+                  <span>ETL Pipeline</span>
+                  <span>Plotly</span>
+                  <span>Business Intelligence</span>
+                </div>
+                <a href="project-resinflow.html" class="project-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="project-visual"><i class="fas fa-chart-line"></i></div>
             </div>
-            <div class="project-info">
-              <h3>STYX</h3>
-              <p>Flask • Python • PostgreSQL • pytest • CI/CD</p>
-              <p class="project-description">
-                Full-stack workout tracking application with robust backend architecture, 
-                comprehensive testing suite, and automated CI/CD pipeline.
-              </p>
-              <div class="project-links">
-                <a href="https://github.com/mohamadmeri" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="View code on GitHub">
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-wrapper fade-in-up">
+            <h2>Let's Create Something Together.</h2>
+            <p class="contact-subtitle">I'm currently available for new opportunities.</p>
+            
+            <div class="contact-content">
+              <a href="mailto:mohamad-meri@outlook.com" class="btn-email btn-magnetic">
+                <i class="fas fa-envelope"></i> Send Me an Email
+              </a>
+              
+              <div class="contact-socials">
+                <a href="https://github.com/mohamadmeri" target="_blank" class="contact-social-link">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="project-styx.html" class="project-details-btn" aria-label="View project details">
-                  View Details <i class="fas fa-arrow-right"></i>
+                <a href="https://www.linkedin.com/in/mohamad-meri/" target="_blank" class="contact-social-link">
+                  <i class="fab fa-linkedin"></i>
                 </a>
               </div>
             </div>
-          </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact">
-        <div class="container">
-          <div class="section-header">
-            <h2>Get In Touch</h2>
-            <p class="section-subtitle">Let's work together</p>
-          </div>
-
-          <div class="contact-content">
-            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-            <a href="mailto:mohamad-meri@outlook.com" class="btn btn-primary">Send Me an Email</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer id="footer">
+    <footer>
       <div class="container">
-        <div class="footer-content">
-          <div class="social-links">
-            <a href="https://github.com/mohamadmeri" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/mohamadmeri/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:mohamad-meri@outlook.com" aria-label="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
-          <p>&copy; <span id="datee"></span> Mohamad Meri. All rights reserved.</p>
+        <p class="footer-text">&copy; <span id="year"></span> Mohamad Meri. Built with precision.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/mohamadmeri" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mohamad-meri/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </footer>
 
-    <!-- Resume Modal -->
     <div id="resumeModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
-          <h3>My Resume</h3>
+          <h3>Resume</h3>
           <span class="modal-close">&times;</span>
         </div>
         <div class="modal-body">
-          <iframe 
-            src="assets/Mohamad_Meri_CV.pdf" 
-            class="pdf-viewer"
-            title="Mohamad Meri Resume">
-          </iframe>
+          <iframe src="assets/Mohamad_Meri_CV.pdf" title="Resume"></iframe>
         </div>
         <div class="modal-footer">
-          <a href="assets/Mohamad_Meri_CV.pdf" download="Mohamad_Meri_Resume.pdf" class="btn btn-primary">
+          <a href="assets/Mohamad_Meri_CV.pdf" download class="btn btn-primary">
             <i class="fas fa-download"></i> Download PDF
           </a>
-          <a href="assets/Mohamad_Meri_CV.pdf" target="_blank" class="btn btn-secondary">
+          <a href="assets/Mohamad_Meri_CV.pdf" target="_blank" class="btn btn-text">
             <i class="fas fa-external-link-alt"></i> Open in New Tab
           </a>
         </div>
       </div>
-    </div> 
+    </div>
 
     <script src="js/script.js"></script>
   </body>

@@ -1,51 +1,12 @@
-/* This file contains reusable utility classes */
-
-/* Container variations */
-.container-small {
-  max-width: var(--width-small);
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.container-large {
-  max-width: var(--width-large);
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-/* Text utilities */
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-/* Spacing utilities */
-.mt-1 { margin-top: 1rem; }
-.mt-2 { margin-top: 2rem; }
-.mt-3 { margin-top: 3rem; }
+/* Utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
 
 .mb-1 { margin-bottom: 1rem; }
 .mb-2 { margin-bottom: 2rem; }
 .mb-3 { margin-bottom: 3rem; }
 
-.py-1 { padding: 1rem 0; }
-.py-2 { padding: 2rem 0; }
-.py-3 { padding: 3rem 0; }
-
-/* Selection styling */
-::selection {
-  background: var(--primary-color);
-  color: #000;
-}
-
-::-moz-selection {
-  background: var(--primary-color);
-  color: #000;
-}
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }

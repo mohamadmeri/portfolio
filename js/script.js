@@ -1,316 +1,366 @@
-// =================== THEME TOGGLE ===================
-const checkbox = document.getElementById("switch");
-const html = document.documentElement;
-
-// Check for saved theme preference or default to 'light' mode
-const currentTheme = localStorage.getItem("theme") || "light";
-html.setAttribute("data-theme", currentTheme);
-if (currentTheme === "dark") {
-  checkbox.checked = true;
-}
-
-checkbox.addEventListener("change", function () {
-  if (this.checked) {
-    html.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark");
-  } else {
-    html.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light");
-  }
-});
-
-// =================== HAMBURGER MENU ===================
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
-
-// Close menu when clicking on a nav link
-document.querySelectorAll(".nav-link").forEach((link) => {
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-  });
-});
-
-// =================== NAVBAR SCROLL EFFECT ===================
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
-
-// =================== SCROLL SPY & ACTIVE NAV LINKS ===================
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-link");
-
-function updateActiveLink() {
-  let current = "";
-  
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (window.scrollY >= sectionTop - 200) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
-    }
-  });
-}
-
-window.addEventListener("scroll", updateActiveLink);
-
-// =================== SCROLL DOTS NAVIGATION (Desktop) ===================
-const scrollDotsContainer = document.createElement("div");
-scrollDotsContainer.className = "scroll-dots";
-
-const sectionData = [
-  { id: "hero", name: "Home" },
-  { id: "about", name: "About" },
-  { id: "skills", name: "Skills" },
-  { id: "experience", name: "Experience" },
-  { id: "projects", name: "Projects" },
-  { id: "contact", name: "Contact" }
-];
-
-sectionData.forEach((section) => {
-  const dot = document.createElement("div");
-  dot.className = "scroll-dot";
-  dot.setAttribute("data-section", section.id);
-  
-  const tooltip = document.createElement("span");
-  tooltip.className = "scroll-dot-tooltip";
-  tooltip.textContent = section.name;
-  dot.appendChild(tooltip);
-  
-  dot.addEventListener("click", () => {
-    document.getElementById(section.id).scrollIntoView({ behavior: "smooth" });
-  });
-  
-  scrollDotsContainer.appendChild(dot);
-});
-
-document.body.appendChild(scrollDotsContainer);
-
-// Update active dot on scroll
-function updateActiveDot() {
-  let current = "";
-  
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    if (window.scrollY >= sectionTop - 300) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  document.querySelectorAll(".scroll-dot").forEach((dot) => {
-    dot.classList.remove("active");
-    if (dot.getAttribute("data-section") === current) {
-      dot.classList.add("active");
-    }
-  });
-}
-
-window.addEventListener("scroll", updateActiveDot);
-
-// =================== MOBILE SCROLL PROGRESS BAR ===================
-const progressBar = document.createElement("div");
-progressBar.className = "scroll-progress";
-progressBar.innerHTML = '<div class="scroll-progress-bar"></div>';
-document.body.appendChild(progressBar);
-
-function updateProgressBar() {
-  const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrolled = (window.scrollY / windowHeight) * 100;
-  document.querySelector(".scroll-progress-bar").style.width = scrolled + "%";
-}
-
-window.addEventListener("scroll", updateProgressBar);
-
-// =================== BACK TO TOP BUTTON ===================
-const backToTop = document.createElement("div");
-backToTop.className = "back-to-top";
-backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
-document.body.appendChild(backToTop);
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 500) {
-    backToTop.classList.add("visible");
-  } else {
-    backToTop.classList.remove("visible");
-  }
-});
-
-backToTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// =================== TYPING ANIMATION ===================
-const typingText = "Building scalable backend systems, data pipelines, and intelligent solutions with clean, maintainable code.";
-const typingElement = document.querySelector(".hero-description");
-let charIndex = 0;
-
-function typeWriter() {
-  if (charIndex < typingText.length) {
-    typingElement.textContent = typingText.substring(0, charIndex + 1);
-    charIndex++;
-    setTimeout(typeWriter, 50);
-  } else {
-    // Add blinking cursor after typing is complete
-    const cursor = document.createElement("span");
-    cursor.className = "typing-cursor";
-    typingElement.appendChild(cursor);
+document.addEventListener('DOMContentLoaded', () => {
     
-    // Remove cursor after 3 seconds
-    setTimeout(() => {
-      cursor.style.display = "none";
-    }, 3000);
-  }
-}
+    // 1. DYNAMIC YEAR
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-// Start typing animation when page loads
-window.addEventListener("load", () => {
-  typingElement.textContent = "";
-  setTimeout(typeWriter, 500);
-});
+    // 2. TYPING EFFECT FOR HERO PARAGRAPH
+    const typedTextElement = document.getElementById('typedText');
+    const fullText = "I architect robust ETL pipelines, build modular backend systems, and design interactive dashboards that drive business decisions.";
+    
+    if (typedTextElement) {
+        let charIndex = 0;
+        
+        function typeText() {
+            if (charIndex < fullText.length) {
+                typedTextElement.textContent += fullText.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, 20);
+            }
+        }
+        
+        setTimeout(typeText, 800);
+    }
 
-// =================== PARALLAX EFFECT FOR HERO ===================
-const profileImage = document.querySelector(".profile-image");
-const gradientBlobs = document.querySelectorAll(".gradient-blob");
+    // 3. NAVBAR SCROLL & SCROLL SPY - FIXED
+    const navbar = document.getElementById('navbar');
+    const floatingLogo = document.getElementById('floatingLogo');
+    const floatingResume = document.getElementById('floatingResumeBtn');
+    const progressBar = document.getElementById('progressBar');
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-document.addEventListener("mousemove", (e) => {
-  const mouseX = e.clientX / window.innerWidth;
-  const mouseY = e.clientY / window.innerHeight;
-  
-  // Profile image parallax (3D tilt effect)
-  if (profileImage && window.innerWidth > 768) {
-    const moveX = (mouseX - 0.5) * 20;
-    const moveY = (mouseY - 0.5) * 20;
-    profileImage.style.transform = `translateY(0) perspective(1000px) rotateY(${moveX}deg) rotateX(${-moveY}deg)`;
-  }
-  
-  // Gradient blobs parallax
-  gradientBlobs.forEach((blob, index) => {
-    const speed = (index + 1) * 0.5;
-    const moveX = (mouseX - 0.5) * 50 * speed;
-    const moveY = (mouseY - 0.5) * 50 * speed;
-    blob.style.transform = `translate(${moveX}px, ${moveY}px)`;
-  });
-});
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        
+        // Progress Bar
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        if (progressBar) progressBar.style.width = scrolled + "%";
 
-// =================== SCROLL ANIMATIONS ===================
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -100px 0px"
-};
+        // Navbar Toggle (Only for Home Page)
+        const isHomePage = document.getElementById('hero');
+        
+        if (isHomePage && navbar) {
+            if (scrollY > 100) {
+                navbar.classList.add('visible');
+                // Hide floating elements when navbar is visible
+                if (floatingLogo) floatingLogo.style.opacity = '0';
+                if (floatingResume) {
+                    floatingResume.style.opacity = '0';
+                    floatingResume.style.pointerEvents = 'none'; // ADDED: Explicitly disable clicks
+                    floatingResume.style.visibility = 'hidden'; // ADDED: Hide completely
+                }
+            } else {
+                navbar.classList.remove('visible');
+                // Show floating elements when navbar is hidden
+                if (floatingLogo) floatingLogo.style.opacity = '1';
+                if (floatingResume) {
+                    floatingResume.style.opacity = '1';
+                    floatingResume.style.pointerEvents = 'auto'; // ADDED: Re-enable clicks
+                    floatingResume.style.visibility = 'visible'; // ADDED: Show again
+                }
+            }
+        }
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      if (entry.target.classList.contains("skills-grid")) {
-        // Stagger animation for all skill cards in this grid
-        const cards = entry.target.querySelectorAll(".skill-card");
-        cards.forEach((card, index) => {
-          setTimeout(() => {
-            card.classList.add("animate");
-          }, index * 100);
+        // Scroll Spy
+        let currentSection = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= (sectionTop - 200)) {
+                currentSection = section.getAttribute('id');
+            }
         });
-        observer.unobserve(entry.target);
-      } else if (entry.target.classList.contains("projects-grid")) {
-        // Stagger animation for project cards
-        const cards = entry.target.querySelectorAll(".project-card");
-        cards.forEach((card, index) => {
-          setTimeout(() => {
-            card.classList.add("animate");
-          }, index * 150);
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(currentSection)) {
+                link.classList.add('active');
+            }
         });
-        observer.unobserve(entry.target);
-      } else {
-        entry.target.classList.add("animate");
-        observer.unobserve(entry.target);
-      }
+    });
+
+    // 4. PROFILE 3D TILT WITH PARALLAX
+    const profileCard = document.getElementById('profileCard');
+    const profileContainer = document.querySelector('.profile-container');
+    
+    if (profileCard && profileContainer) {
+        profileContainer.addEventListener('mousemove', (e) => {
+            const rect = profileContainer.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 15;
+            const rotateY = (centerX - x) / 15;
+            
+            profileCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+        
+        profileContainer.addEventListener('mouseleave', () => {
+            profileCard.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+        });
     }
-  });
-}, observerOptions);
 
-// Observe all skills grids
-document.querySelectorAll(".skills-grid").forEach((grid) => {
-  observer.observe(grid);
-});
+    // 5. SCROLL-TRIGGERED ANIMATIONS (Intersection Observer)
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
 
-// Observe projects grid
-const projectsGrid = document.querySelector(".projects-grid");
-if (projectsGrid) {
-  observer.observe(projectsGrid);
-}
+    const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-visible');
+            }
+        });
+    }, observerOptions);
 
-// Observe timeline items
-document.querySelectorAll(".timeline-item").forEach((item) => {
-  observer.observe(item);
-});
+    // Observe all animatable elements
+    document.querySelectorAll('.fade-in-up, .stagger-item').forEach(el => {
+        fadeInObserver.observe(el);
+    });
 
-// =================== RESUME MODAL ===================
-const resumeBtn = document.getElementById("resumeBtn");
-const modal = document.getElementById("resumeModal");
-const modalClose = document.querySelector(".modal-close");
+    // 6. STAGGER ANIMATIONS
+    const staggerContainers = document.querySelectorAll('.stagger-container');
+    staggerContainers.forEach(container => {
+        const items = container.querySelectorAll('.stagger-item');
+        items.forEach((item, index) => {
+            item.style.transitionDelay = `${index * 0.1}s`;
+        });
+    });
 
-if (resumeBtn && modal) {
-  resumeBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    modal.classList.add("active");
-    document.body.style.overflow = "hidden";
-  });
+    // 7. MOBILE MENU
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
 
-  modalClose.addEventListener("click", () => {
-    modal.classList.remove("active");
-    document.body.style.overflow = "auto";
-  });
-
-  // Close modal when clicking outside
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.classList.remove("active");
-      document.body.style.overflow = "auto";
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', (e) => { // FIXED: Added 'e' parameter
+            e.stopPropagation();
+            
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            
+            if (mobileMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        }
+        
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
     }
-  });
 
-  // Close modal with Escape key
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("active")) {
-      modal.classList.remove("active");
-      document.body.style.overflow = "auto";
+    // 8. MODAL
+    const modal = document.getElementById('resumeModal');
+    const openBtns = [
+        document.getElementById('resumeBtn'), 
+        document.getElementById('floatingResumeBtn'), 
+        document.getElementById('mobileResumeBtn')
+    ];
+    const closeBtn = document.querySelector('.modal-close');
+
+    openBtns.forEach(btn => {
+        if (btn) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (modal) modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                if (mobileMenu) mobileMenu.classList.remove('active');
+                if (hamburger) hamburger.classList.remove('active');
+            });
+        }
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            if (modal) modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
     }
-  });
-}
 
-// =================== FOOTER YEAR ===================
-const dateElement = document.getElementById("datee");
-if (dateElement) {
-  dateElement.textContent = new Date().getFullYear();
-}
-
-// =================== SMOOTH SCROLL FOR ALL ANCHOR LINKS ===================
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+    if (modal) {
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
     }
-  });
+    
+    // 9. SMOOTH SCROLL FOR ANCHOR LINKS
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            
+            if (href === '#') return;
+            
+            e.preventDefault();
+            
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // 10. MAGNETIC BUTTON EFFECT
+    const magneticButtons = document.querySelectorAll('.btn-magnetic');
+    magneticButtons.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+        });
+        
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0, 0)';
+        });
+    });
+
+    // 11. PARALLAX SCROLL EFFECT ON HERO (DESKTOP ONLY)
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const heroContent = document.querySelector('.hero-text');
+        const profileCard = document.querySelector('.profile-card');
+        
+        // Only apply parallax on desktop (window width > 768px)
+        const isDesktop = window.innerWidth > 768;
+        
+        if (isDesktop && heroContent && scrolled < 800) {
+            heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+            heroContent.style.opacity = 1 - (scrolled / 800);
+        } else if (heroContent) {
+            // Reset on mobile
+            heroContent.style.transform = '';
+            heroContent.style.opacity = '';
+        }
+        
+        if (isDesktop && profileCard && scrolled < 800) {
+            profileCard.style.transform = `translateY(${scrolled * 0.15}px)`;
+        } else if (profileCard) {
+            // Reset on mobile
+            profileCard.style.transform = '';
+        }
+    });
+
+    // 12. CURSOR SPOTLIGHT EFFECT IN HERO SECTION
+    const heroSection = document.querySelector('.hero-section');
+    const heroSpotlight = document.getElementById('heroSpotlight');
+    
+    if (heroSection && heroSpotlight) {
+        let mouseX = 0;
+        let mouseY = 0;
+        let spotlightX = 0;
+        let spotlightY = 0;
+        
+        heroSection.addEventListener('mouseenter', () => {
+            heroSpotlight.classList.add('active');
+        });
+        
+        heroSection.addEventListener('mouseleave', () => {
+            heroSpotlight.classList.remove('active');
+        });
+        
+        heroSection.addEventListener('mousemove', (e) => {
+            const rect = heroSection.getBoundingClientRect();
+            mouseX = e.clientX - rect.left;
+            mouseY = e.clientY - rect.top;
+        });
+        
+        // Smooth spotlight animation with easing
+        function animateSpotlight() {
+            const dx = mouseX - spotlightX;
+            const dy = mouseY - spotlightY;
+            
+            spotlightX += dx * 0.1;
+            spotlightY += dy * 0.1;
+            
+            heroSpotlight.style.left = spotlightX + 'px';
+            heroSpotlight.style.top = spotlightY + 'px';
+            heroSpotlight.style.transform = 'translate(-50%, -50%)';
+            
+            requestAnimationFrame(animateSpotlight);
+        }
+        
+        animateSpotlight();
+    }
+    
+    // 13. FADE-IN ANIMATIONS FOR PROJECT PAGE CARDS
+    if (document.querySelector('.content-card') || document.querySelector('.process-card')) {
+        const projectObserverOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const projectFadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Add slight delay for stagger effect
+                    setTimeout(() => {
+                        entry.target.classList.add('fade-in-visible');
+                    }, index * 100);
+                }
+            });
+        }, projectObserverOptions);
+
+        // Observe all project cards
+        document.querySelectorAll('.content-card, .process-card').forEach(card => {
+            projectFadeObserver.observe(card);
+        });
+    }
+
+    // 14. HIDE VERTICAL SOCIALS ON SCROLL DOWN
+    const contactSection = document.querySelector('.contact-section');
+    const sidebarSocials = document.querySelector('.vertical-socials');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // If contact section is visible (even 10% of it)
+            if (entry.isIntersecting) {
+                sidebarSocials.classList.add('hide-socials');
+            } else {
+                sidebarSocials.classList.remove('hide-socials');
+            }
+        });
+    }, {
+        threshold: 0.1 // Trigger when 10% of the contact section is visible
+    });
+
+    if (contactSection) {
+        observer.observe(contactSection);
+    }
 });
