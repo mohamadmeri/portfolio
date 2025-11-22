@@ -1321,9 +1321,7 @@ footer {
     
     /* Adjust floating elements for mobile */
     .vertical-socials {
-        left: 0.5rem;
-        bottom: 1rem;
-        gap: 0.6rem;
+        display: none;
     }
     
     .vertical-socials::after {
